@@ -1,14 +1,15 @@
 const { series, src, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
-const del = require('del'); 
 const googleWebFonts = require('gulp-google-webfonts');
+const del = require('del'); 
+// var plumber = require('gulp-plumber');
 
 
 const clean = () => del(['dist']);
 
 const css = () => {
-  return src('./sass/**/*.scss')
+  return src(['./sass/**/*.scss'])
   .pipe(sass({includePaths: require('node-normalize-scss').includePaths}).on('error', sass.logError))
   .pipe(dest('./dist/css'));  
 }
@@ -36,8 +37,14 @@ const fonts = () => {
     cssFilename: 'googleFonts.css',
     relativePaths: true
   }))
-  .pipe(dest('./dist/'));
+  .pipe(dest('./dist/')); 
 }
+
+// const plumber =() => {
+//   return src('./src/*.ext')
+//   .pipe(plumber())
+//   .pipe(dest('./dist'));
+// }
 
 const images = () => src('./images/**/*').pipe(dest('./dist/images'));
 
