@@ -1,9 +1,13 @@
 const { series, src, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
+const normalize = require('node-normalize-scss');
 const browsersync = require("browser-sync").create();
 sass.compiler = require('node-sass');
+const rename = require("gulp-rename");
+const autoprefixer = require("gulp-autoprefixer");
+const cssnano = require('gulp-cssnano');
 const googleWebFonts = require('gulp-google-webfonts');
-const del = require('del'); 
+const del = require('del');
 // var plumber = require('gulp-plumber');
 
 
@@ -25,12 +29,25 @@ const browserSyncReload = (done) => {
 
 const clean = () => del(['dist']);
 
+
 const css = () => {
   return src(['./sass/**/*.scss'])
-  .pipe(sass({includePaths: require('node-normalize-scss').includePaths}).on('error', sass.logError))
+  .pipe(sass({includePaths: normalize.includePaths}).on('error', sass.logError))
+  .pipe(rename({ suffix: ".min"}))
+  .pipe(autoprefixer())
+  .pipe(cssnano({discardComments: {removeAll: true}}))
   .pipe(dest('./dist/css'))
-  .pipe(browsersync.stream());
 }
+
+
+// const minifyGoogleFonts = () => {
+//   return src('.dist/css/googleFonts.css')
+//   .pipe(rename({ suffix: ".min"}))
+//   .pipe(autoprefixer())
+//   .pipe(cssnano())
+//   .pipe(del(['dist/css']))
+// }
+
 
 const html = () => {
   return src('./templates/**/*.html')
