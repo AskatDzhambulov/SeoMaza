@@ -192,10 +192,92 @@ body {
   }
   .about-block-btn{
     @include flexCenter;
-    margin-left: 150px;
+    margin-left: 75px;
     .btn-about{
       @include button-type-one;
       margin-left: 65px;
+      width: 140px;
+      height: 50px;
   }          
 }
-            
+
+.achive{
+  background-color: $orange;
+  margin-top: 130px;
+  .achive-wrapper{
+    height: 330px;
+    .achive-container{
+      width: 1003px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.service{
+  height: 1021px;
+  .service-wrapper{
+    width: 1139px;
+    height: 760px;
+    margin: 0 auto;
+    .service-block-btn{
+      @include flexCenter;
+      margin-top: 90px;
+      .btn-service{
+        @include button-type-one;
+      }
+    }
+  }
+}
+.service-container{
+  @include flexSpaceBetween;
+  height: 430px;
+  .service-block{
+    width: 360px;
+    height: 430px;
+    border-radius: 5px;
+    background-color: #ff6a40;
+    .service-content{
+      width: 270px;
+      height: 310px;
+      margin: 60px 45px 60px 45px;
+      @include flexCenterColumn;
+      .service-image{
+        margin-bottom: 54px;
+      }
+      .service-block-title{
+        width: 244px;
+        height: 22px;
+        color: #f9f9f9;
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+      }
+      .service-block-description{
+        width: 270px;
+        height: 61px;
+        color: #ffffff;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 0.56px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .service-block-more{
+        width: 94px;
+        height: 11px;
+        color: #ffffff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: center;
+      }
+    }
+  }
+}

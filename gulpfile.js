@@ -48,6 +48,7 @@ const css = () => {
 //   .pipe(del(['dist/css']))
 // }
 
+        
 
 const html = () => {
   return src('./templates/**/*.html')
@@ -60,7 +61,7 @@ const  js = () => {
 }
 
 const fontawesome = () =>{
-  return src('node-modules/@fortawasome/fontawesome-free/webfonts/*')
+  return src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
   .pipe(dest('./dist/webfonts'));
 }
 
