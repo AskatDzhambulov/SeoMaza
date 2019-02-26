@@ -1,5 +1,201 @@
 @import "main";
 
-body{
-  background: red;
+body {
+  li{
+    margin: 0;
+  }
 }
+
+*{
+  font-family: Roboto;
+}
+
+
+.main{
+  margin: 0 auto;
+  .main-wrapper{
+
+  }
+}
+
+// .text-wrapper{
+//   @include flexCenter;  
+//   width: 772px;
+//   height: 95px;
+//   margin: 0 auto;
+//   .text-block{
+//     .text-title{
+//       width: 259px;
+//       height: 32px;
+//       color: #454547;
+//       font-size: 42px;
+//       font-weight: 400;
+//     }
+//     .text-description{
+//       width: 722px;
+//       height: 39px;
+//       color: #62656b;
+//       font-family: Roboto;
+//       font-size: 14px;
+//       font-weight: 300;
+//       line-height: 25px;
+//       letter-spacing: 0.56px;
+//     }
+//   }
+// }
+
+.slider{
+  height: 776px;
+  .slider-wrapper{
+    padding: 153px 0;
+    width: 1140px;
+    height: 469;
+    margin: 0 auto;
+    @include flexCenter; 
+    .slider-block{
+      width: 548px;
+      height: 469px;
+      .slider-text{
+        font-size: 65px;
+        font-weight: 700;
+        width: 536px;
+        height: 193px;
+        line-height: 72.83px;
+        text-transform: capitalize;
+        margin-bottom: 50px;
+      }
+      .slider-description{
+        width: 548px;
+        height: 40px;
+        color: #6d6d6d;
+        font-size: 14px;
+        font-weight: 300; 
+        line-height: 26px;
+        letter-spacing: 0.56px;
+        margin-bottom: 34px;
+      }
+      .slider-description-text{
+        width: 270px;
+        height: 14px;
+        color: #6d6d6d;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0.56px;
+        margin-bottom: 50px;
+      }
+      .slider-block-btn{
+        .btn-slider{
+          @include button-type-one;
+        }
+      }
+    }
+    .slider-image-block{
+      width: 556px;
+      height: 424px;
+      .slider-image{
+        padding: 23px;
+      }
+    }
+  }
+}  
+
+.about-us {
+  .about-wrapper{
+    height: 950px;
+    margin: 0 auto;
+    .about-container{
+      width: 1139px;
+      height: 260px;
+      margin: 0 auto;
+      @include flexSpaceBetween;
+      .about-block{
+        width: 360px;
+        height: 260px;
+        border-radius: 5px;
+        background-color: #1eba87;
+        box-shadow: -1px 7px 8px 1px rgba(69, 69, 71, 0.5);
+        .about-block-wrapper{
+          @include flexCenterColumn;
+        .about-block-title{
+          text-transform: capitalize;
+          width: 230px;
+          height: 22px;
+          color: #ffffff;
+          font-family: Roboto;
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 27px;
+          letter-spacing: 0.88px;
+          text-align: center;
+        }
+          .about-block-description{
+            width: 270px;
+            height: 61px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px;
+            letter-spacing: 0.56px;
+            text-align: center;
+          }
+            .about-block-more{
+              text-align: center;
+              text-transform: capitalize; 
+              width: 94px;
+              height: 11px;
+              color: #ffffff;
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
+        }
+        .orange-block{
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .about-block-infoImage{
+    .about-image-block{
+      padding-top: 40px;
+    }
+    width: 1111px;
+    height: 441px;
+    margin: 0 auto;
+    @include flexCenter;
+    margin-top: 90px;
+    .about-info-block{
+      width: 649px;
+      height: 324;
+      margin: 0 auto;
+      .about-info-title{
+        width: 400px;
+        height: 29px;
+        color: #3d3d3e;
+        font-family: Roboto;
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+      .about-info-description{
+        width: 649px;
+        height: 264px;
+        color: #6d6d6d;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 0.6px;
+      }
+    }
+  }
+  .about-block-btn{
+    @include flexCenter;
+    margin-left: 150px;
+    .btn-about{
+      @include button-type-one;
+      margin-left: 65px;
+  }          
+}
+            

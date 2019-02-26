@@ -1,30 +1,30 @@
-@import "variables";
-@import "mixins";
-
- 
- 
 footer{
   color: white;
   background-color: $orange;
-  height: 930px;
+  height: 800px;
   .footer-wrapper{
     padding-top: 100px;
-    margin: 0px 230px 0px 230px;
+    margin: 0px 100px 0px 100px;
     display: flex;
     flex-direction: column;
     
     .main-footer{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       .margin-top{
         margin-top: 0;
       }
       h2{
         padding-bottom: 50px;
         text-transform: uppercase;
+        font-family: "Montserrat - Black";
+        font-size: 23px;
+        font-weight: 700;
       }
-      display: flex;
-      justify-content: space-between;
+      
       .footer-info{
-        width: 23%;
+        width: 250px;
         div{
           display: flex;
           flex-direction: row;
@@ -35,47 +35,66 @@ footer{
         }
       }
       .footer_contact-us{
-        width: 33%;
+        width: 300px;
         color: white;
         form{
           display: flex;
           flex-direction: column;
           color: white;
-          input{
-            color: white; 
-            width: 359px;
-            height: 42px;
-            border-radius: 3px;
-            border: 1px solid #ffffff;
-            margin-bottom: 10px;
-            background-color: $orange;
-          }
-          .big-input{
-            color: white;
-            width: 359px;
-            height: 100px;
-            border-radius: 3px;
-            border: 1px solid #ffffff;
-          }
-          button{
-            width: 137px;
-            height: 45px;
-            border-radius: 5px;
-            background-color: #ffffff;
-            border-color: #ffffff;
-            color: $orange;
-          }
-        }
+                  input{
+                    color: white;
+                    height: 42px;
+                    border-radius: 3px;
+                    border: 1px solid #ffffff;
+                    margin-bottom: 10px;
+                    background-color: $orange;
+                  }
+                  .big-input{
+                    color: white;
+                    height: 100px;
+                    border-radius: 3px;
+                    border: 1px solid #ffffff;
+                  }
+                  button{
+                    width: 137px;
+                    height: 45px;
+                      border-radius: 5px;
+                      background-color: #ffffff;
+                      border-color: #ffffff;
+                      color: $orange;
+                    }
+                    
+                    input::-webkit-input-placeholder {
+                      color: white;
+                      padding-left: 8px;
+                    }
+                    .big-input::-webkit-input-placeholder{
+                      vertical-align: top;
+                    }
+                  }
+                }
+                .footer_latest-news{
+                  width: 250px;
+                  
+                  div{
+                    p{
+                      color: #ffffff;
+                      font-family: Roboto;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 25px;
+                      span{
+                        font-style: italic;
+                      }
+                    }
+                  }
+                }
       }
-      .footer_latest-news{
-        margin-left: 80px;
+      .super-footer{
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        
       }
-    }
-    .super-footer{
-      display: flex;
-      justify-content: center;
-      margin-top: 150px;
-      
     }
   }
-}

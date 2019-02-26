@@ -1,12 +1,9 @@
 @import "variables";
 @import "header";
 @import "footer";
+@import "mixins";
+@import "vendor";
 
-
-body{
-  margin: 0;
-}
-h1,h2,h3,h4,h5,ul{
-  padding: 0;
-  margin: 0;
+.orange{
+  color: $orange;
 }

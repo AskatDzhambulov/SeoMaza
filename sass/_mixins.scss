@@ -1,0 +1,30 @@
+@mixin flexCenter{
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexSpaceBetween{
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flexSpaceAround {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin width{
+  margin: 0px 100px 0px 100px;
+}
+
+@mixin flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin button-type-one {
+  width: 180px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #ff6a40;
+  text-transform: capitalize;
+}
