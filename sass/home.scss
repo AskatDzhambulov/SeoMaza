@@ -1,17 +1,7 @@
 @import "main";
 
-body {
-  li{
-    margin: 0;
-  }
-}
-
-*{
-  font-family: Roboto;
-}
-
-
 .main{
+  background-color: #f9f9f9;
   margin: 0 auto;
   .main-wrapper{
 
@@ -60,9 +50,13 @@ body {
         font-weight: 700;
         width: 536px;
         height: 193px;
+        font-family: Roboto;
         line-height: 72.83px;
         text-transform: capitalize;
         margin-bottom: 50px;
+      }
+      .slider-text-orange{
+        color: $orange;
       }
       .slider-description{
         width: 548px;
@@ -71,12 +65,14 @@ body {
         font-size: 14px;
         font-weight: 300; 
         line-height: 26px;
+        font-family: Roboto;
         letter-spacing: 0.56px;
         margin-bottom: 34px;
       }
       .slider-description-text{
-        width: 270px;
+        width: 380px;
         height: 14px;
+        font-family: Roboto;
         color: #6d6d6d;
         font-size: 14px;
         font-weight: 300;
@@ -93,8 +89,8 @@ body {
     .slider-image-block{
       width: 556px;
       height: 424px;
+      padding-top: 55px;
       .slider-image{
-        padding: 23px;
       }
     }
   }
@@ -117,6 +113,7 @@ body {
         box-shadow: -1px 7px 8px 1px rgba(69, 69, 71, 0.5);
         .about-block-wrapper{
           @include flexCenterColumn;
+          margin-top:  50px;
         .about-block-title{
           text-transform: capitalize;
           width: 230px;
@@ -132,6 +129,7 @@ body {
           .about-block-description{
             width: 270px;
             height: 61px;
+            font-family: Roboto;
             color: #ffffff;
             font-size: 14px;
             font-weight: 300;
@@ -235,7 +233,7 @@ body {
     width: 360px;
     height: 430px;
     border-radius: 5px;
-    background-color: #ff6a40;
+    background-color: #1eba87;
     .service-content{
       width: 270px;
       height: 310px;
@@ -277,6 +275,137 @@ body {
         font-weight: 700;
         text-transform: capitalize;
         text-align: center;
+      }
+    }
+  }
+  .orange-block{
+    background-color: $orange;
+  }
+}
+
+.case {
+  height: 1462px;
+  .case-wrapper{
+    .case-block-btn{
+      @include flexCenter;
+      margin-top: 93px;
+      .btn-case{
+        @include button-type-one;
+      }
+    }
+  }
+}
+.case-container{
+  width: 1140px;
+  height: 873px;
+  margin: 0 auto;
+  @include flexSpaceBetween;
+  flex-wrap: wrap;
+  .case-block{
+    width: 360px;
+    height: 422px;
+    margin-bottom: 30px;
+    box-shadow: -1px 6px 9px rgba(35, 31, 32, 0.35);
+    .case-block-image{
+      width: 360px;
+      height: 322px;
+      background-color: #1eba87;
+      @include flexImages;
+      .case-image{
+      }
+    }
+    .case-block-bottom{
+      height: 100px;
+      background-color: #ffffff;
+      border-bottom: 3px solid #1eba87;
+      .case-block-bottom-title{
+        width: 242px;
+        height: 19px;
+        color: #1a1818;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 33.33px;
+        letter-spacing: 0.8px;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 26px;
+      }
+      .case-block-bottom-description{
+        width: 103px;
+        height: 13px;
+        color: #454547;
+        font-family: Nunito;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 33.33px;
+        letter-spacing: 0.56px;
+        margin: 0 auto;
+        margin-top: 15px;
+        text-transform: capitalize;
+      }
+    }
+    .orange-block{
+      background-color: $orange;
+    }
+    .orange{
+      border-bottom: 3px solid $orange;
+    }
+  }
+}
+
+.email{
+  background-color: $orange;
+  .email-wrapper{
+    width: 825px;
+    height: 366px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .email-text-block{
+      width: 798px;
+      height: 85px;
+      .email-text{
+        font-family: "Roboto - Regular";
+        color: #f9f9f9;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 43px;
+        line-height: 52.83px;
+        text-align: center;
+      }
+      .email-text-other{
+        text-transform: capitalize;
+        font-family: "Roboto - Regular";
+        font-size: 46px;
+        font-weight: 400;
+        font-family: "Roboto - Bold";
+        font-weight: 700;
+      }
+    }
+    .email-input-block{
+      width: 825px;
+      height: 68px;
+      .email-input{
+        width: 649px;
+        height: 68px;
+        border-radius: 5px;
+      }
+      .email-input-btn{
+        width: 176px;
+        height: 68px;
+        .email-btn{
+          width: 176px;
+          height: 75px;
+          position: absolute;
+          right: 262px;
+          top: 5022px;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+        }
       }
     }
   }

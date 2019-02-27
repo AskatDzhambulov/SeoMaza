@@ -21,6 +21,12 @@
   align-items: center;
 }
 
+@mixin flexImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin button-type-one {
   width: 180px;
   height: 55px;
