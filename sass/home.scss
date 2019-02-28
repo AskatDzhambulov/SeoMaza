@@ -8,19 +8,28 @@
   }
 }
 .text-wrapper{
+  margin-top: 130px;
+  width: 722px;
+  height: 96px;
   .text-block{
-    width: 722px;
-    height: 96px;
+    @include flexCenterColumn;
+    justify-content: center;
     .text-title{
+      text-align: center;
       width: 334px;
       height: 33px;
+      text-transform: capitalize;
       color: #454547;
       font-family: Roboto;
       font-size: 42px;
       font-weight: 400;
       line-height: 14.4px;
     }
+    .orange{
+      color: $orange;
+    }
     .text-description{
+      text-align: center;
       width: 722px;
       height: 39px;
       color: #62656b;
