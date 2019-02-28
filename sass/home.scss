@@ -7,32 +7,33 @@
 
   }
 }
+.text-wrapper{
+  .text-block{
+    width: 722px;
+    height: 96px;
+    .text-title{
+      width: 334px;
+      height: 33px;
+      color: #454547;
+      font-family: Roboto;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 14.4px;
+    }
+    .text-description{
+      width: 722px;
+      height: 39px;
+      color: #62656b;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 25px;
+      letter-spacing: 0.56px;
+    }
+  }
+}
 
-// .text-wrapper{
-//   @include flexCenter;  
-//   width: 772px;
-//   height: 95px;
-//   margin: 0 auto;
-//   .text-block{
-//     .text-title{
-//       width: 259px;
-//       height: 32px;
-//       color: #454547;
-//       font-size: 42px;
-//       font-weight: 400;
-//     }
-//     .text-description{
-//       width: 722px;
-//       height: 39px;
-//       color: #62656b;
-//       font-family: Roboto;
-//       font-size: 14px;
-//       font-weight: 300;
-//       line-height: 25px;
-//       letter-spacing: 0.56px;
-//     }
-//   }
-// }
+
 .slider{
   height: 776px;
   .slider-wrapper{
