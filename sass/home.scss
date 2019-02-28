@@ -399,7 +399,9 @@
       .email-input{
         width: 649px;
         height: 68px;
+        border: 2px solid #ffffff;
         border-radius: 5px;
+        background-color: $orange;
       }
       .email-input-btn{
         width: 176px;
@@ -527,6 +529,72 @@
   .team-block{
     width: 264px;
     height: 420px;
-    
+    .team-imagine-block{
+      width: 263px;
+      height: 188px;
+      background-color: #1eba87;
+      @include flexImages;
+    }
+    .orange-block{
+      background-color: $orange;
+    }
+    .team-block-info{
+      width: 263px;
+      height: 231px;
+      border-radius: 5px;
+      background-color:#f9f7f7;
+      @include flexSpaceAround;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 3px solid #1eba87;
+      .team-block-title{
+        width: 263px;
+        height: 16px;
+        color: #323335;
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        margin:  0 auto;
+        text-transform: uppercase;
+      }
+      .team-block-status{
+        width: 140px;
+        height: 14px;
+        color: #ff6a40;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: italic;
+        line-height: 27px;
+      }
+      .team-block-description{
+        width: 216px;
+        height: 86px;
+        text-align: center;
+        color: #9c9c9c;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0.56px;
+      }
+    }
+    .orange{
+      border-bottom: 3px solid $orange;
+    }
+  }
+}
+
+
+.client{
+  height: 803px;
+  background-image: url('../images/Layer_531.png');
+  .client-wrapper{
+    height: 803px;
+    background-color: #ff6a40;
+    opacity: 0.9;
+
   }
 }
