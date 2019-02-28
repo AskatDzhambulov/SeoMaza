@@ -216,10 +216,55 @@
       height: 330px;
       .achive-container{
         width: 1003px;
+        height: 150px;
         margin: 0 auto;
+        @include flexSpaceBetween;
+        .achive-block{
+          width: 141px;
+          height: 149px;
+          .achive-content{
+            @include flexCenterColumn;
+            justify-content: center;
+          .achiveIcons{
+            width: 61px;
+            height: 52px;
+            color: #ffffff;
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 20.42px;
+            letter-spacing: -0.9px;
+            text-align: center;
+            margin-bottom: 35px;
+          }
+          .achive-numbers{
+            width: 72px;
+            height: 22px;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 20.42px;
+            text-transform: uppercase;
+            letter-spacing: 1.95px;
+            text-align: center;
+            margin-bottom: 18px;
+          }
+          .achive-names{
+            width: 141px;
+            height: 21px;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 20.42px;
+            letter-spacing: 0.8px;
+            text-align: center;
+          }
+        }
       }
     }
   }
+}
   
   .service{
     height: 1021px;
@@ -657,64 +702,87 @@
 }
 
 .blog{
-  width: 937px;
+  height: 937px;
   .blog-wrapper{
     background-color: #f9f9f9;
     @include flexCenterColumn;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
-  .blog-container{
-   width: 1141px;
+.blog-container{
+  width: 1141px;
    height: 535px; 
    margin: 0 auto;
    @include flexSpaceBetween;
    .blog-block{
-   width: 361px;
-   .blog-block-imagine{
-    width: 360px;
-    height: 241px;
-    border-radius: 5px;
-    background-color: #1eba87;
-    @include flexImages;
-   }
-//    .blog-block-info{
-//      height: 293px;
-//      width: 360px;
-//      .blog-post{
-//        @include flexCenter;
-//        .blog-block-post-user{
-//         width: 63px;
-//         text-transform: capitalize;
-//         height: 14px;
-//         color: #9e9e9e;
-//         font-family: Roboto;
-//         font-size: 14px;
-//         font-weight: 500;
-//         letter-spacing: 0.56px;
-//        }
-//        .blog-block-inside{
-
-//         .blog-block-title{
-//           width: 278px;
-//           height: 18px;
-//           color: #353537;
-//           font-family: Roboto;
-//           font-size: 22px;
-//           font-weight: 400;
-//         }
-//         .blog-block-description{
-//           width: 306px;
-//           height: 89px;
-//           color: #9e9e9e;
-//           font-family: Roboto;
-//           font-size: 14px;
-//           font-weight: 300;  
-//           line-height: 25px;
-//           letter-spacing: 0.56px;
-//         }
-//        }
-//      }
-//    }
- }
-}
+     width: 361px;
+     .blog-block-imagine{
+       width: 360px;
+       height: 241px;
+       border-radius: 5px;
+       background-color: #1eba87;
+       @include flexImages;
+      }
+      .orange-block{
+        background-color: $orange;
+      }
+      .blog-block-info{
+        height: 293px;
+        @include flexCenterColumn;
+        justify-content: space-evenly;
+        border-bottom: 5px solid #1eba87;
+        .blog-block-post{
+          width: 300px;
+          @include flexSpaceAround;
+          align-items: center;
+          .blog-block-post-user{
+            width: 93px;
+            height: 11px;
+            color: #9e9e9e;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.56px;
+            text-align: center;
+            text-transform: capitalize;
+          }
+        }
+        .blog-block-inside{
+          @include flexCenterColumn;
+          justify-content: space-evenly;
+          .blog-block-title{
+            width: 278px;
+            height: 18px;
+            color: #353537;
+            font-family: Roboto;
+            font-size: 22px;
+            text-transform: capitalize;
+            font-weight: 400;
+          }
+          .blog-block-description{
+            width: 306px;
+            height: 89px;
+            text-align: center;
+            color: #9e9e9e;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px;
+            letter-spacing: 0.56px;
+          }
+          .blog-block-more{
+            width: 89px;
+            height: 11px;
+            color: #353537;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .orange{
+        border-bottom: 5px solid $orange;
+      }
+    }
+  }
