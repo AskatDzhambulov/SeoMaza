@@ -37,10 +37,9 @@
   height: 776px;
   .slider-wrapper{
     padding: 153px 0;
-    width: 1140px;
     height: 469;
     margin: 0 auto;
-    @include flexCenter; 
+    @include flexCenter;
     .slider-block{
       width: 548px;
       height: 469px;
@@ -107,6 +106,8 @@
   .about-wrapper{
     height: 950px;
     margin: 0 auto;
+    @include flexCenterColumn;
+    justify-content: space-evenly;
     .about-container{
       width: 1139px;
       height: 260px;
@@ -162,13 +163,13 @@
     }
   }
   .about-block-infoImage{
-    .about-image-block{
-      padding-top: 40px;
-    }
     width: 1111px;
     height: 441px;
     margin: 0 auto;
     @include flexCenter;
+    .about-image-block{
+      padding-top: 40px;
+    }
     margin-top: 90px;
     .about-info-block{
       width: 649px;
@@ -210,6 +211,8 @@
     background-color: $orange;
     margin-top: 130px;
     .achive-wrapper{
+      @include flexCenterColumn;
+      justify-content: space-evenly;
       height: 330px;
       .achive-container{
         width: 1003px;
@@ -221,7 +224,8 @@
   .service{
     height: 1021px;
     .service-wrapper{
-      width: 1139px;
+      @include flexCenterColumn;
+      justify-content: space-evenly;
       height: 760px;
       margin: 0 auto;
       .service-block-btn{
@@ -234,6 +238,7 @@
     }
   }
   .service-container{
+    width: 1139px;
     @include flexSpaceBetween;
     height: 430px;
     .service-block{
@@ -293,6 +298,8 @@
 .case {
   height: 1462px;
   .case-wrapper{
+    @include flexCenterColumn;
+    justify-content: space-evenly;
     .case-block-btn{
       @include flexCenter;
       margin-top: 93px;
@@ -318,13 +325,11 @@
       height: 322px;
       background-color: #1eba87;
       @include flexImages;
-      .case-image{
-      }
     }
     .case-block-bottom{
       height: 100px;
       background-color: #ffffff;
-      border-bottom: 3px solid #1eba87;
+      border-bottom: 5px solid #1eba87;
       .case-block-bottom-title{
         width: 242px;
         height: 19px;
@@ -357,7 +362,7 @@
       background-color: $orange;
     }
     .orange{
-      border-bottom: 3px solid $orange;
+      border-bottom: 5px solid $orange;
     }
   }
 }
@@ -365,13 +370,9 @@
 .email{
   background-color: $orange;
   .email-wrapper{
-    width: 825px;
-    height: 366px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    @include flexCenterColumn;
     justify-content: space-evenly;
-    align-items: center;
+    height: 366px;
     .email-text-block{
       width: 798px;
       height: 85px;
@@ -425,7 +426,8 @@
 .pricing{
   height: 1025px;
   .pricing-wrapper{
-    width: 1142px;
+    @include flexCenterColumn;
+    justify-content: space-evenly;
     height: 765px;
     margin: 0 auto;
     .pricing-block-btn{
@@ -487,7 +489,7 @@
         box-shadow: -1px 6px 9px rgba(35, 31, 32, 0.35);
         border-radius: 5px;
         background-color: #ffffff;
-        border-bottom: 3px solid #1eba87;
+        border-bottom: 5px solid #1eba87;
         .pricing-bottom-item{
           width: 220px;
           height: 184px;
@@ -509,7 +511,7 @@
         }
       }
       .orange{
-        border-bottom: 2px solid $orange;
+        border-bottom: 5px solid $orange;
       }
     }
   }
@@ -517,13 +519,15 @@
 .team{
   height: 935px;
   .team-wrapper{
-    width: 1140px;
+    @include flexCenterColumn;
+    justify-content: space-evenly;
     height: 603px;
     margin: 0 auto;
   }
 }
 
 .team-container{
+  width: 1140px;
   height: 420px;
   @include flexSpaceBetween;
   .team-block{
@@ -542,11 +546,11 @@
       width: 263px;
       height: 231px;
       border-radius: 5px;
-      background-color:#f9f7f7;
+      background-color:#ffffff;
       @include flexSpaceAround;
       flex-direction: column;
       align-items: center;
-      border-bottom: 3px solid #1eba87;
+      border-bottom: 5px solid #1eba87;
       .team-block-title{
         width: 263px;
         height: 16px;
@@ -565,6 +569,7 @@
         color: #ff6a40;
         text-align: center;
         font-family: Roboto;
+        text-transform: capitalize;
         font-size: 14px;
         font-style: italic;
         line-height: 27px;
@@ -582,7 +587,7 @@
       }
     }
     .orange{
-      border-bottom: 3px solid $orange;
+      border-bottom: 5px solid $orange;
     }
   }
 }
@@ -594,7 +599,122 @@
   .client-wrapper{
     height: 803px;
     background-color: #ff6a40;
-    opacity: 0.9;
-
+    opacity: 0.9; 
+    @include flexCenterColumn;
+    justify-content: center;
   }
+}
+.client-container{
+  width: 1005px;
+  height: 263px;
+  @include flexCenter;
+  justify-content: space-evenly;
+  .client-block{
+    width: 488px;
+    display: flex;
+    .client-block-imagine{
+      width: 196px;
+      background-color: #1eba87;
+      @include flexImages;
+    }
+    .client-block-info{
+      width: 292px;
+      @include flexCenterColumn;
+      justify-content: space-evenly;
+      background-color: #ffffff;  
+      border-right: 5px solid #1eba87;
+      .client-block-description{
+        width: 261px;
+        height: 114px;
+        color: #5f5f5f;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0.56px;
+      }
+      .client-block-title{
+        width: 159px;
+        height: 17px;
+        color: #353537;
+        font-family: Roboto;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      .client-block-status{
+        width: 166px;
+        height: 14px;
+        color: #1eba87;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: italic;
+        letter-spacing: 0.56px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.blog{
+  width: 937px;
+  .blog-wrapper{
+    background-color: #f9f9f9;
+    @include flexCenterColumn;
+    justify-content: center;
+  }
+}
+  .blog-container{
+   width: 1141px;
+   height: 535px; 
+   margin: 0 auto;
+   @include flexSpaceBetween;
+   .blog-block{
+   width: 361px;
+   .blog-block-imagine{
+    width: 360px;
+    height: 241px;
+    border-radius: 5px;
+    background-color: #1eba87;
+    @include flexImages;
+   }
+//    .blog-block-info{
+//      height: 293px;
+//      width: 360px;
+//      .blog-post{
+//        @include flexCenter;
+//        .blog-block-post-user{
+//         width: 63px;
+//         text-transform: capitalize;
+//         height: 14px;
+//         color: #9e9e9e;
+//         font-family: Roboto;
+//         font-size: 14px;
+//         font-weight: 500;
+//         letter-spacing: 0.56px;
+//        }
+//        .blog-block-inside{
+
+//         .blog-block-title{
+//           width: 278px;
+//           height: 18px;
+//           color: #353537;
+//           font-family: Roboto;
+//           font-size: 22px;
+//           font-weight: 400;
+//         }
+//         .blog-block-description{
+//           width: 306px;
+//           height: 89px;
+//           color: #9e9e9e;
+//           font-family: Roboto;
+//           font-size: 14px;
+//           font-weight: 300;  
+//           line-height: 25px;
+//           letter-spacing: 0.56px;
+//         }
+//        }
+//      }
+//    }
+ }
 }
