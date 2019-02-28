@@ -33,7 +33,6 @@
 //     }
 //   }
 // }
-
 .slider{
   height: 776px;
   .slider-wrapper{
@@ -69,17 +68,25 @@
         letter-spacing: 0.56px;
         margin-bottom: 34px;
       }
-      .slider-description-text{
-        width: 380px;
-        height: 14px;
-        font-family: Roboto;
-        color: #6d6d6d;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0.56px;
-        margin-bottom: 50px;
+      .slider-description-block{
+        .check{
+          width: 16px;
+          height: 13px;
+          color: #ff6a40;
+          font-size: 18px;
+        }
+        .slider-description-text{
+          width: 380px;
+          height: 14px;
+          font-family: Roboto;
+          color: #6d6d6d;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          letter-spacing: 0.56px;
+          margin-bottom: 50px;
       }
+    }
       .slider-block-btn{
         .btn-slider{
           @include button-type-one;
@@ -114,29 +121,29 @@
         .about-block-wrapper{
           @include flexCenterColumn;
           margin-top:  50px;
-        .about-block-title{
-          text-transform: capitalize;
-          width: 230px;
-          height: 22px;
-          color: #ffffff;
-          font-family: Roboto;
-          font-size: 22px;
-          font-weight: 500;
-          line-height: 27px;
+          .about-block-title{
+            text-transform: capitalize;
+            width: 230px;
+            height: 22px;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 27px;
           letter-spacing: 0.88px;
           text-align: center;
         }
-          .about-block-description{
-            width: 270px;
-            height: 61px;
-            font-family: Roboto;
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 25px;
-            letter-spacing: 0.56px;
-            text-align: center;
-          }
+        .about-block-description{
+          width: 270px;
+          height: 61px;
+          font-family: Roboto;
+          color: #ffffff;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 25px;
+          letter-spacing: 0.56px;
+          text-align: center;
+        }
             .about-block-more{
               text-align: center;
               text-transform: capitalize; 
@@ -196,44 +203,44 @@
       margin-left: 65px;
       width: 140px;
       height: 50px;
-  }          
-}
-
-.achive{
-  background-color: $orange;
-  margin-top: 130px;
-  .achive-wrapper{
-    height: 330px;
-    .achive-container{
-      width: 1003px;
-      margin: 0 auto;
-    }
+    }          
   }
-}
-
-.service{
-  height: 1021px;
-  .service-wrapper{
-    width: 1139px;
-    height: 760px;
-    margin: 0 auto;
-    .service-block-btn{
-      @include flexCenter;
-      margin-top: 90px;
-      .btn-service{
-        @include button-type-one;
+  
+  .achive{
+    background-color: $orange;
+    margin-top: 130px;
+    .achive-wrapper{
+      height: 330px;
+      .achive-container{
+        width: 1003px;
+        margin: 0 auto;
       }
     }
   }
-}
-.service-container{
-  @include flexSpaceBetween;
-  height: 430px;
-  .service-block{
-    width: 360px;
+  
+  .service{
+    height: 1021px;
+    .service-wrapper{
+      width: 1139px;
+      height: 760px;
+      margin: 0 auto;
+      .service-block-btn{
+        @include flexCenter;
+        margin-top: 90px;
+        .btn-service{
+          @include button-type-one;
+        }
+      }
+    }
+  }
+  .service-container{
+    @include flexSpaceBetween;
     height: 430px;
-    border-radius: 5px;
-    background-color: #1eba87;
+    .service-block{
+      width: 360px;
+      height: 430px;
+      border-radius: 5px;
+      background-color: #1eba87;
     .service-content{
       width: 270px;
       height: 310px;
@@ -404,9 +411,122 @@
           right: 262px;
           top: 5022px;
           border-radius: 5px;
+          text-transform: capitalize;
+          color: $orange;
           background-color: #f9f9f9;
         }
       }
     }
+  }
+}
+
+.pricing{
+  height: 1025px;
+  .pricing-wrapper{
+    width: 1142px;
+    height: 765px;
+    margin: 0 auto;
+    .pricing-block-btn{
+      @include flexCenter;
+      .pricing-btn{
+        width: 136px;
+        height: 39px;
+        border-radius: 5px;
+        background-color: #1eba87;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.pricing-container{
+  width: 1142px;
+  height: 581px;
+  @include flexSpaceBetween;
+  .pricing-block{
+    width: 361px;
+    .pricing-block-top{
+      width: 360px;
+      height: 252px;
+      background-color: #1eba87;
+      @include flexCenterColumn;
+      .pricing-image-top{
+        @include flexImages;
+        padding-top: 14px;
+      }
+        .pricing-top-title{
+          width: 190px;
+          @include flexImages;
+          text-align: center;
+          height: 70px;
+          color: #ffffff;
+          font-family: Roboto;
+          font-size: 21px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.83px;
+        }
+        .pricing-top-price{
+          padding-top: 10px;
+          width: 199px;
+          height: 50px;
+          color: #ffffff;
+          font-family: Roboto;
+          font-size: 54px;
+          font-weight: 700;
+          text-align: center;
+          line-height: 27px;
+        }
+      }.orange-block{
+        background-color: $orange;
+      }
+      .pricing-block-bottom{
+        width: 361px;
+        height: 327px;
+        box-shadow: -1px 6px 9px rgba(35, 31, 32, 0.35);
+        border-radius: 5px;
+        background-color: #ffffff;
+        border-bottom: 3px solid #1eba87;
+        .pricing-bottom-item{
+          width: 220px;
+          height: 184px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          margin-top: 32px;
+          margin-bottom: 32px;
+          .pricing-bottom-link{
+            width: 195px;
+            height: 16px;
+            color: #9b9a9a;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 27px;
+          }
+        }
+      }
+      .orange{
+        border-bottom: 2px solid $orange;
+      }
+    }
+  }
+
+.team{
+  height: 935px;
+  .team-wrapper{
+    width: 1140px;
+    height: 603px;
+    margin: 0 auto;
+  }
+}
+
+.team-container{
+  height: 420px;
+  @include flexSpaceBetween;
+  .team-block{
+    width: 264px;
+    height: 420px;
+    
   }
 }

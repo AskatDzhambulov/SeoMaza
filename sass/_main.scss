@@ -21,8 +21,15 @@ body {
   h5{
     margin: 0;
   }
-    li{
+  ul{
     margin: 0;
+    li{
+      margin: 0;
+      list-style: none;
+  }
+}
+  a{
+    text-decoration: none;
   }
 }
 
